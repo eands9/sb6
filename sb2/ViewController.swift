@@ -85,6 +85,9 @@ class ViewController: UIViewController {
         } catch {print("error")}
     }
     @IBAction func wordInfoSeg(_ sender: Any) {
+        buildSearchUrl()
+        getWordInfo()
+        
         let wordInfoIndex = wordInfoSeg.selectedSegmentIndex
         switch wordInfoIndex {
         case 0:
