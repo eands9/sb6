@@ -53,7 +53,6 @@ class ViewController: UIViewController {
         readMe(myText: "Spell \(allWords.list[0].spellWord).")
         let numberOfQuestions = allWords.list
         totalNumberOfQuestions = numberOfQuestions.count
-        chkBtnSeg.selectedSegmentIndex = 3
         self.wordTxtView.becomeFirstResponder()
     }
     func buildSearchUrl(){
@@ -94,14 +93,18 @@ class ViewController: UIViewController {
             wordTxtView.text = wordTypeTxt
         case 1:
             wordTxtView.text = wordDefTxt
+            chkBtnSeg.setEnabled(false, forSegmentAt: 0)
         case 2:
             wordTxtView.text = wordSentenceTxt
+            chkBtnSeg.setEnabled(false, forSegmentAt: 0)
         case 3:
             wordTxtView.text = wordPronounciationTxt
+            chkBtnSeg.setEnabled(false, forSegmentAt: 0)
         case 4:
             playsound()
         case 5:
             goToYouTube()
+            chkBtnSeg.setEnabled(false, forSegmentAt: 0)
         default:
             wordTxtView.text = "There's an Error!"
         }
@@ -115,6 +118,7 @@ class ViewController: UIViewController {
             repeatBtn()
         case 2:
             showWord()
+            chkBtnSeg.setEnabled(false, forSegmentAt: 0)
         case 3:
             wordTxtView.text = ""
         case 4:
@@ -247,7 +251,9 @@ class ViewController: UIViewController {
                 self.wordTxtView.textColor = (UIColor.red)
             }
         }
-        chkBtnSeg.selectedSegmentIndex = 3
+        enableAllBtn()
+        chkBtnSeg.selectedSegmentIndex = -1
+        wordInfoSeg.selectedSegmentIndex = -1
     }
     func nextWordIsReview(){
         questionNumber += 1
@@ -268,7 +274,9 @@ class ViewController: UIViewController {
             alert.addAction(restartAction)
             present(alert, animated: true, completion: nil)
         }
-        chkBtnSeg.selectedSegmentIndex = 3
+        enableAllBtn()
+        chkBtnSeg.selectedSegmentIndex = -1
+        wordInfoSeg.selectedSegmentIndex = -1
     }
     func showWord(){
         if isTesting == true && wrongAlready == false {
@@ -291,7 +299,9 @@ class ViewController: UIViewController {
         else {
             nextWordIsReview()
         }
-        chkBtnSeg.selectedSegmentIndex = 3
+        enableAllBtn()
+        chkBtnSeg.selectedSegmentIndex = -1
+        wordInfoSeg.selectedSegmentIndex = -1
     }
     func startOver(){
         questionNumber = 0
@@ -314,7 +324,7 @@ class ViewController: UIViewController {
     func randomTryAgain(){
         randomPick = Int(arc4random_uniform(2))
         readMe(myText: retryArray[randomPick])
-        chkBtnSeg.selectedSegmentIndex = 3
+        chkBtnSeg.selectedSegmentIndex = -1
     }
     func updateProgress(){
         progressLbl.text = "Correct/Attempt: \(correctAnswers) / \(numberAttempts)"
@@ -331,6 +341,19 @@ class ViewController: UIViewController {
         
         markedQuestions.append(Word(word: trackedWord))
         markedQuestionsCount += 1
+    }
+    func enableAllBtn(){
+        chkBtnSeg.setEnabled(true, forSegmentAt: 0)
+        chkBtnSeg.setEnabled(true, forSegmentAt: 1)
+        chkBtnSeg.setEnabled(true, forSegmentAt: 2)
+        chkBtnSeg.setEnabled(true, forSegmentAt: 3)
+        chkBtnSeg.setEnabled(true, forSegmentAt: 4)
+        wordInfoSeg.setEnabled(true, forSegmentAt: 0)
+        wordInfoSeg.setEnabled(true, forSegmentAt: 1)
+        wordInfoSeg.setEnabled(true, forSegmentAt: 2)
+        wordInfoSeg.setEnabled(true, forSegmentAt: 3)
+        wordInfoSeg.setEnabled(true, forSegmentAt: 4)
+        wordInfoSeg.setEnabled(true, forSegmentAt: 5)
     }
 }
 

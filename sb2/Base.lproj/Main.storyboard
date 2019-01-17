@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sb2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7NE-Qt-sul">
-                                <rect key="frame" x="21" y="41" width="333" height="235"/>
+                                <rect key="frame" x="217.5" y="41" width="333" height="235"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="235" id="4xs-Ns-7xc"/>
                                     <constraint firstAttribute="width" constant="333" id="I9c-RE-kFM"/>
@@ -28,11 +28,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
                             </textView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CdL-bt-EmG">
-                                <rect key="frame" x="34.5" y="319" width="306" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="CdL-bt-EmG">
+                                <rect key="frame" x="239.5" y="313" width="289" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="306" id="9gd-Aq-71H"/>
-                                    <constraint firstAttribute="height" constant="28" id="IWH-qb-IvJ"/>
+                                    <constraint firstAttribute="height" constant="28" id="hU2-aj-ezG"/>
+                                    <constraint firstAttribute="width" constant="289" id="jTY-GM-dCa"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Check"/>
@@ -45,11 +45,21 @@
                                     <action selector="checkBtnSeg:" destination="BYZ-38-t0r" eventType="valueChanged" id="xNY-ld-pcg"/>
                                 </connections>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8oC-8C-Oou">
-                                <rect key="frame" x="21" y="371" width="333" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct / Question: 00/00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpO-wF-AXn">
+                                <rect key="frame" x="276.5" y="284" width="215" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="rJB-vQ-BWI"/>
-                                    <constraint firstAttribute="width" constant="333" id="tDT-82-pU3"/>
+                                    <constraint firstAttribute="width" constant="215" id="B8V-Ly-dSX"/>
+                                    <constraint firstAttribute="height" constant="21" id="leK-f4-khu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="8oC-8C-Oou">
+                                <rect key="frame" x="204.5" y="349" width="359" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="359" id="LaK-xL-Lpk"/>
+                                    <constraint firstAttribute="height" constant="28" id="P4s-6e-EUL"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Type"/>
@@ -63,27 +73,17 @@
                                     <action selector="wordInfoSeg:" destination="BYZ-38-t0r" eventType="valueChanged" id="uZP-bx-AOV"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct / Question: 00/00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpO-wF-AXn">
-                                <rect key="frame" x="80" y="284" width="215" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="215" id="B8V-Ly-dSX"/>
-                                    <constraint firstAttribute="height" constant="21" id="leK-f4-khu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7NE-Qt-sul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2O6-c5-XTA"/>
-                            <constraint firstItem="8oC-8C-Oou" firstAttribute="top" secondItem="CdL-bt-EmG" secondAttribute="bottom" constant="24" id="BwT-60-Zxm"/>
-                            <constraint firstItem="8oC-8C-Oou" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H8U-cn-N1n"/>
-                            <constraint firstItem="CdL-bt-EmG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M5x-Nz-bGR"/>
+                            <constraint firstItem="CdL-bt-EmG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Bx-I2-yg3"/>
                             <constraint firstItem="XpO-wF-AXn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Noi-ck-7FS"/>
                             <constraint firstItem="7NE-Qt-sul" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="PGj-ex-5np"/>
-                            <constraint firstItem="CdL-bt-EmG" firstAttribute="top" secondItem="XpO-wF-AXn" secondAttribute="bottom" constant="14" id="fJg-3u-Dcw"/>
                             <constraint firstItem="XpO-wF-AXn" firstAttribute="top" secondItem="7NE-Qt-sul" secondAttribute="bottom" constant="8" id="rQ2-6Q-34G"/>
+                            <constraint firstItem="CdL-bt-EmG" firstAttribute="top" secondItem="XpO-wF-AXn" secondAttribute="bottom" constant="8" id="uf8-Fd-doR"/>
+                            <constraint firstItem="8oC-8C-Oou" firstAttribute="top" secondItem="CdL-bt-EmG" secondAttribute="bottom" constant="8" id="wn7-6Q-Kn0"/>
+                            <constraint firstItem="8oC-8C-Oou" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wyD-oj-hfc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
