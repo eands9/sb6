@@ -53,10 +53,12 @@ class ViewController: UIViewController {
         readMe(myText: "Spell \(allWords.list[0].spellWord).")
         let numberOfQuestions = allWords.list
         totalNumberOfQuestions = numberOfQuestions.count
+        chkBtnSeg.selectedSegmentIndex = 3
         self.wordTxtView.becomeFirstResponder()
     }
     func buildSearchUrl(){
-        spellingWord = "gulag"
+        //spellingWord = "gulag"
+        spellingWord = allWords.list[questionNumber].spellWord
         builtUrl = "https://www.merriam-webster.com/dictionary/\(spellingWord)"
     }
     func getWordInfo(){
@@ -242,6 +244,7 @@ class ViewController: UIViewController {
                 self.wordTxtView.textColor = (UIColor.red)
             }
         }
+        chkBtnSeg.selectedSegmentIndex = 3
     }
     func nextWordIsReview(){
         questionNumber += 1
@@ -262,6 +265,7 @@ class ViewController: UIViewController {
             alert.addAction(restartAction)
             present(alert, animated: true, completion: nil)
         }
+        chkBtnSeg.selectedSegmentIndex = 3
     }
     func showWord(){
         if isTesting == true && wrongAlready == false {
@@ -284,6 +288,7 @@ class ViewController: UIViewController {
         else {
             nextWordIsReview()
         }
+        chkBtnSeg.selectedSegmentIndex = 3
     }
     func startOver(){
         questionNumber = 0
@@ -306,6 +311,7 @@ class ViewController: UIViewController {
     func randomTryAgain(){
         randomPick = Int(arc4random_uniform(2))
         readMe(myText: retryArray[randomPick])
+        chkBtnSeg.selectedSegmentIndex = 3
     }
     func updateProgress(){
         progressLbl.text = "Correct/Attempt: \(correctAnswers) / \(numberAttempts)"
