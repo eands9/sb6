@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		00190AACB68FC47E70C221C8 /* Pods-sb2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sb2.release.xcconfig"; path = "Pods/Target Support Files/Pods-sb2/Pods-sb2.release.xcconfig"; sourceTree = "<group>"; };
 		16A6C7EFE8D9E5D866422E8E /* Pods_sb2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sb2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DD9700221F0E77C0076DA4D /* sb2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sb2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DD9700221F0E77C0076DA4D /* sb5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sb5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DD9700521F0E77C0076DA4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DD9700721F0E77C0076DA4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6DD9700A21F0E77C0076DA4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		6DD9700321F0E77C0076DA4D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DD9700221F0E77C0076DA4D /* sb2.app */,
+				6DD9700221F0E77C0076DA4D /* sb5.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,9 +105,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6DD9700121F0E77C0076DA4D /* sb2 */ = {
+		6DD9700121F0E77C0076DA4D /* sb5 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DD9701421F0E77E0076DA4D /* Build configuration list for PBXNativeTarget "sb2" */;
+			buildConfigurationList = 6DD9701421F0E77E0076DA4D /* Build configuration list for PBXNativeTarget "sb5" */;
 			buildPhases = (
 				405B0F6CE64839B0F9176F35 /* [CP] Check Pods Manifest.lock */,
 				6DD96FFE21F0E77C0076DA4D /* Sources */,
@@ -119,9 +119,9 @@
 			);
 			dependencies = (
 			);
-			name = sb2;
+			name = sb5;
 			productName = sb2;
-			productReference = 6DD9700221F0E77C0076DA4D /* sb2.app */;
+			productReference = 6DD9700221F0E77C0076DA4D /* sb5.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -139,7 +139,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6DD96FFD21F0E77C0076DA4D /* Build configuration list for PBXProject "sb2" */;
+			buildConfigurationList = 6DD96FFD21F0E77C0076DA4D /* Build configuration list for PBXProject "sb5" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -152,7 +152,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6DD9700121F0E77C0076DA4D /* sb2 */,
+				6DD9700121F0E77C0076DA4D /* sb5 */,
 			);
 		};
 /* End PBXProject section */
@@ -379,7 +379,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eands9.sb2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eands9.sb5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -398,7 +398,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eands9.sb2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eands9.sb5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -408,7 +408,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6DD96FFD21F0E77C0076DA4D /* Build configuration list for PBXProject "sb2" */ = {
+		6DD96FFD21F0E77C0076DA4D /* Build configuration list for PBXProject "sb5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DD9701221F0E77E0076DA4D /* Debug */,
@@ -417,7 +417,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DD9701421F0E77E0076DA4D /* Build configuration list for PBXNativeTarget "sb2" */ = {
+		6DD9701421F0E77E0076DA4D /* Build configuration list for PBXNativeTarget "sb5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DD9701521F0E77E0076DA4D /* Debug */,
